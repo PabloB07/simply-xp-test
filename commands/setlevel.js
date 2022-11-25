@@ -2,7 +2,7 @@ const xp = require("simply-xp");
 
 module.exports = {
     category: "Economy",
-    description: "Set User Level",
+    description: "Setear el nivel del usuario",
 
     slash: true,
     testOnly: false,
@@ -11,17 +11,17 @@ module.exports = {
 
     minArgs: 1,
     maxArgs: 2,
-    expectedArgs: "<Level> <User>",
+    expectedArgs: "<Nivel> <Usuario>",
     options: [
         {
-            name: "level",
-            description: "Level to set",
+            name: "nivel",
+            description: "Nivel para setear al usuario",
             required: true,
             type: 10
         },
         {
-            name: "user",
-            description: "Select a User",
+            name: "usuario",
+            description: "Seleccionar un usuario",
             required: false,
             type: 6
         }

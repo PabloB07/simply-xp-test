@@ -3,7 +3,7 @@ const xp = require("simply-xp");
 
 module.exports = {
     category: "Economy",
-    description: "View User Rank",
+    description: "Ver el rango de usuario",
 
     slash: true,
     testOnly: false,
@@ -12,35 +12,35 @@ module.exports = {
 
     minArgs: 0,
     maxArgs: 5,
-    expectedArgs: "<User> <Background> <Color> <LvlBar> <LvlBarBG>",
+    expectedArgs: "<Usuario> <Background> <Color> <NivelBar> <NivelBarBG>",
     options: [
         {
-            name: "user",
-            description: "Select a User",
+            name: "usuario",
+            description: "Seleccionar un usuario",
             required: false,
             type: 6
         },
         {
             name: "background",
-            description: "Background Image URL",
+            description: "Poner el URL del background acá",
             required: false,
             type: 3
         },
         {
             name: "color",
-            description: "Colour Hex Code",
+            description: "Colores hexadecimales, Yey!",
             required: false,
             type: 3
         },
         {
-            name: "lvlbar",
-            description: "Level Bar Hex Code",
+            name: "nivelbar",
+            description: "Nivel Codigo Bar Hexadecimal",
             required: false,
             type: 3
         },
         {
-            name: "lvlbarbg",
-            description: "Background Hex Code",
+            name: "nivelbarbg",
+            description: "Background Codigo Hexadecimal",
             required: false,
             type: 3
         }

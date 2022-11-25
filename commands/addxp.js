@@ -2,7 +2,7 @@ const xp = require("simply-xp");
 
 module.exports = {
     category: "Economy",
-    description: "Add Experience",
+    description: "Añadir experiencia",
 
     slash: true,
     testOnly: false,
@@ -11,23 +11,23 @@ module.exports = {
 
     minArgs: 1,
     maxArgs: 3,
-    expectedArgs: "<Exp> <User> <Max Exp>",
+    expectedArgs: "<Experiencia> <Usuario> <Max Experiencia>",
     options: [
         {
             name: "exp",
-            description: "Amount of experience to add",
+            description: "Cantidad de Exp a añadir",
             required: true,
             type: 10
         },
         {
-            name: "user",
-            description: "Select a User",
+            name: "usuario",
+            description: "Seleccionar un usuario",
             required: false,
             type: 6
         },
         {
             name: "max",
-            description: "Max experience to add (this makes exp the minimum)",
+            description: "Max Exp para añadir",
             required: false,
             type: 10
         }

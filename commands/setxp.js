@@ -2,7 +2,7 @@ const xp = require("simply-xp");
 
 module.exports = {
     category: "Economy",
-    description: "Set User Exp",
+    description: "Setear los puntitos al usuario",
 
     slash: true,
     testOnly: false,
@@ -11,17 +11,17 @@ module.exports = {
 
     minArgs: 1,
     maxArgs: 2,
-    expectedArgs: "<Exp> <User>",
+    expectedArgs: "<Puntos> <Usuario>",
     options: [
         {
-            name: "exp",
-            description: "Experience to set",
+            name: "puntos",
+            description: "Puntos solo para setear",
             required: true,
             type: 10
         },
         {
-            name: "user",
-            description: "Select a User",
+            name: "usuario",
+            description: "Seleccionar el usuario",
             required: false,
             type: 6
         }

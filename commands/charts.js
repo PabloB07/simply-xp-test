@@ -2,7 +2,7 @@ const xp = require("simply-xp");
 
 module.exports = {
     category: "Economy",
-    description: "View Charts",
+    description: "Ver el Gráfico",
 
     slash: true,
     testOnly: false,
@@ -11,7 +11,7 @@ module.exports = {
 
     minArgs: 0,
     maxArgs: 3,
-    expectedArgs: "<Background> <Position> <Type>",
+    expectedArgs: "<Background> <Posicion> <Tipo>",
     options: [
         {
             name: "background",
@@ -20,14 +20,14 @@ module.exports = {
             type: 3
         },
         {
-            name: "position",
-            description: "User Count",
+            name: "posicion",
+            description: "Cuenta de Usuario",
             required: false,
             type: 10
         },
         {
-            name: "type",
-            description: "Select Type",
+            name: "tipo",
+            description: "Seleccionar tipo",
             required: false,
             type: 3,
             choices: [

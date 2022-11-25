@@ -2,7 +2,7 @@ const xp = require("simply-xp");
 
 module.exports = {
     category: "Economy",
-    description: "Create New Member",
+    description: "Crear un nuevo miembro",
 
     slash: true,
     testOnly: false,
@@ -11,11 +11,11 @@ module.exports = {
 
     minArgs: 0,
     maxArgs: 1,
-    expectedArgs: "<User>",
+    expectedArgs: "<Usuario>",
     options: [
         {
-            name: "user",
-            description: "Select a User",
+            name: "usuario",
+            description: "Seleccinar un usuario",
             required: false,
             type: 6
         }

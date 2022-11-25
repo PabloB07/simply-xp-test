@@ -11,7 +11,7 @@ const client = new Client({
 	presence: {
 		status: "online",
 		activities: [{
-			name: require(path.join(__dirname, "package.json")).version,
+			name: "League of Legends",
 			type: "WATCHING"
 		}]
 	}
@@ -28,7 +28,7 @@ client.on("ready", async () => {
 
 		delErrMsgCooldown: 5,
 
-		defaultLangauge: "english",
+		defaultLangauge: "spanish",
 
 		dbOptions: {
 			useUnifiedTopology: true,

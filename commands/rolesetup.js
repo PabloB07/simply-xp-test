@@ -2,7 +2,7 @@ const xp = require("simply-xp");
 
 module.exports = {
     category: "Economy",
-    description: "Setup Level Roles",
+    description: "Seleccionar roles",
 
     slash: true,
     testOnly: false,
@@ -11,17 +11,17 @@ module.exports = {
     options: [
         {
             name: "add",
-            description: "Add a role",
+            description: "Añadir un rol",
             options: [
                 {
-                    name: "level",
-                    description: "Level required to get the role.",
+                    name: "nivel",
+                    description: "Para tener un rol debes tener niveles",
                     required: true,
                     type: 10
                 },
                 {
-                    name: "role",
-                    description: "The role to provide.",
+                    name: "rol",
+                    description: "El rol a tener",
                     required: true,
                     type: 8
                 }
@@ -29,11 +29,11 @@ module.exports = {
         },
         {
             name: "remove",
-            description: "Remove roles from a level",
+            description: "Remover un rol del nivel",
             options: [
                 {
-                    name: "level",
-                    description: "Level required to get the role.",
+                    name: "nivel",
+                    description: "Nivel requerido para obtener un rol",
                     required: true,
                     type: 10
                 }
@@ -41,16 +41,16 @@ module.exports = {
         },
         {
             name: "fetch",
-            description: "Fetch Level Roles",
+            description: "Fetch Niveles de roles",
             type: 1
         },
         {
             name: "find",
-            description: "Find roles for a level",
+            description: "Encontrar roles por nivel",
             options: [
                 {
-                    name: "level",
-                    description: "Level required to get the role.",
+                    name: "nivel",
+                    description: "Nivel requerido para tener un rol",
                     required: true,
                     type: 10
                 }
@@ -64,13 +64,13 @@ module.exports = {
         switch (interaction.options.getSubcommand()) {
             case "add":
                 xp.roleSetup.add(client, guild.id, {
-                    level: interaction.options.getNumber("level"),
-                    role: interaction.options.getRole("role").id
+                    level: interaction.options.getNumber("nivel"),
+                    role: interaction.options.getRole("rol").id
                 }).then((res) => {
                     interaction.editReply({
                         embeds: [{
                             title: "Result of Function",
-                            description: JSON.stringify(res) || "Nothing Returned (Something Probably Went Wrong)",
+                            description: JSON.stringify(res) || "Nada, hay un error, cuentaselo a un Admin o Developer!",
                             color: res ? "GREEN" : "ORANGE"
                         }]
                     })
@@ -89,7 +89,7 @@ module.exports = {
                     interaction.editReply({
                         embeds: [{
                             title: "Result of Function",
-                            description: JSON.stringify(res) || "Nothing Returned (Something Probably Went Wrong)",
+                            description: JSON.stringify(res) || "Nada, hay un error, cuentaselo a un Admin o Developer!",
                             color: res ? "GREEN" : "ORANGE"
                         }]
                     })
@@ -141,8 +141,8 @@ module.exports = {
             default:
                 interaction.editReply({
                     embeds: [{
-                        title: "How did you get here?",
-                        description: "You can try that again.",
+                        title: "Como llegate acá, oe?",
+                        description: "Intentelo denuevo mas tarde..",
                         color: "RED"
                     }]
                 }); break

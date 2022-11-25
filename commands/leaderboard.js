@@ -2,7 +2,7 @@ const xp = require("simply-xp");
 
 module.exports = {
     category: "Economy",
-    description: "Leaderboard System",
+    description: "Sistema Leaderboards",
 
     slash: true,
     testOnly: false,
@@ -10,10 +10,10 @@ module.exports = {
     cooldown: "5s",
     minArgs: 0,
     maxArgs: 1,
-    expectedArgs: "<Limit>",
+    expectedArgs: "<Limite>",
     options: [{
-        name: "limit",
-        description: "Limit Results",
+        name: "limite",
+        description: "Resultado del limite",
         required: false,
         type: 10
     }],
